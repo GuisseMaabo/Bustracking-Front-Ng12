@@ -14,3 +14,9 @@ agm-map {
   margin-right: 1rem;
 }
 
+
+@media screen and (max-width: 768PX){
+  nb-layout-header{
+    display: block;
+  }
+}
