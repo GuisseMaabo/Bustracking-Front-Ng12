@@ -1,0 +1,74 @@
+<div class="infos">
+ <nb-card size="small">
+      <nb-card-header>Liste des élèves</nb-card-header>
+      <nb-list>
+        <nb-list-item *ngFor="let user of users">
+          <nb-user [name]="user.name" [title]="user.title">
+          </nb-user>
+        </nb-list-item>
+      </nb-list>
+    </nb-card>
+
+     <nb-card size="small">
+
+      <nb-card-header> Détails de la  véhicule</nb-card-header>
+    <div class="vehicule">
+      <nb-list>
+        <nb-list-item>Ecole :  Maison de la sagesse</nb-list-item>
+        <nb-list-item>Chauffeur : Isakha</nb-list-item>
+        <nb-list-item>Position : Cité des eaux</nb-list-item>
+        <nb-list-item>Traffic : Serré</nb-list-item>
+        <nb-list-item>Heure arrivée Prévue : 18h30</nb-list-item>
+        <nb-list-item>Matricule : dk-xxxx-yy</nb-list-item>
+      </nb-list>
+    </div>
+  </nb-card>
+</div>
+
+
+
+<!--<div class="card-row">
+  <div class="card-col">
+    <nb-card size="small">
+      <nb-card-header>Liste des élèves</nb-card-header>
+      <nb-list>
+        <nb-list-item *ngFor="let user of users">
+          <nb-user [name]="user.name" [title]="user.title">
+
+          </nb-user>
+        </nb-list-item>
+      </nb-list>
+    </nb-card>
+    <nb-card size="small" >
+      <nb-card-header> Détails de la  véhicule</nb-card-header>
+      <nb-list>
+        <nb-list-item> Ecole : Maison de la sagesse</nb-list-item>
+        <nb-list-item> Chauffeur : Isakha </nb-list-item>
+        <nb-list-item> Position : Cité des eaux</nb-list-item>
+        <nb-list-item> Traffic : Serré</nb-list-item>
+        <nb-list-item> Heure arrivée Prévue : 18h30</nb-list-item>
+        <nb-list-item> Matricule : dk-xxxx-yy</nb-list-item>
+      </nb-list>
+    </nb-card>
+  </div>-->
+  <!--
+ <div class="card-col">
+
+  </div>
+</div>
+
+  -->
+
+  <!--
+    <nb-card size="medium">
+        <nb-card-body>
+            <div leaflet [leafletOptions]="options"></div>
+        </nb-card-body>
+    </nb-card>
+  -->
+
+  <!--
+       <nb-card-body>
+   <div leaflet [leafletOptions]="options"></div>
+      </nb-card-body>
+  -->
