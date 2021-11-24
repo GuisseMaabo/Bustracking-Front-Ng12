@@ -3,10 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AgmCoreModule } from '@agm/core';
 
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbCardModule, NbStepperModule, NbButtonModule } from '@nebular/theme';
+import { NbThemeModule, NbSidebarModule, NbCardModule, NbStepperModule, NbButtonModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 import { FormsModule } from '@angular/forms';
@@ -15,6 +14,7 @@ import { ParentsModule } from './parents/parents.module';
 import { GoogleMapsModule } from '@angular/google-maps';
 
 import { SidebarComponent } from './parents/sidebar/sidebar.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -27,7 +27,6 @@ import { SidebarComponent } from './parents/sidebar/sidebar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     NbThemeModule.forRoot({ name: 'corporate' }),
     NbLayoutModule,
     NbEvaIconsModule,
