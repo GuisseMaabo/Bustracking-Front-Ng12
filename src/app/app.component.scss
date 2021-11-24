@@ -17,7 +17,12 @@ agm-map {
 
 @media screen and (max-width: 768px){
   nb-layout-header{
+    display: inline;
     size: 10px;
+  }
+
+  nav {
+    display: inline-block;
   }
   h5 .title {
     width: 5px;

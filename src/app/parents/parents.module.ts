@@ -22,7 +22,7 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     GoogleMapsModule,
     LeafletModule,
     NbToggleModule,
-
+    NbCardModule
 
 
   ],

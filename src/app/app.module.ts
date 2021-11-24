@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AgmCoreModule } from '@agm/core';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,17 +14,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ParentsModule } from './parents/parents.module';
 import { GoogleMapsModule } from '@angular/google-maps';
 
-import { AgmCoreModule } from '@agm/core';
 import { SidebarComponent } from './parents/sidebar/sidebar.component';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent
-
-
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +39,7 @@ import { SidebarComponent } from './parents/sidebar/sidebar.component';
     NbCardModule,
     NbStepperModule,
     NbButtonModule,
-  AgmCoreModule.forRoot({
+    AgmCoreModule.forRoot({
       apiKey: 'AIzaSyC__5XKQLTE_t0SxOTV3_NI26yzDcqoPKY'
    })
 
