@@ -17,6 +17,9 @@ agm-map {
 
 @media screen and (max-width: 768PX){
   nb-layout-header{
-    display: block;
+    display: inline;
+  }
+  h5 .title {
+    width: 5px;
   }
 }
