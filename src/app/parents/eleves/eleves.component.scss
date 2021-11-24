@@ -20,3 +20,10 @@
 .vehicule nb-list-item{
   padding-bottom: 0.5em;
 }
+
+@media screen and  (max-width: 768px) {
+
+  .vehicule{
+    width: 23vw;
+  }
+}
