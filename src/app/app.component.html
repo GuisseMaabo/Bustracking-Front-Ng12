@@ -4,26 +4,14 @@
       <h5 class="title">School Bus Tracking </h5>
       <app-parent></app-parent>
   </nb-layout-header>
-
+  
+  <nb-layout-column ng-model="myVar" ng-init="myVar = false">
+  <app-eleves></app-eleves>
+  </nb-layout-column>
+  
   <nb-layout-column>
-      <app-eleves></app-eleves>
-      <router-outlet></router-outlet>
+      <router-outlet></router-outlet> 
+      <app-vehicules></app-vehicules>
   </nb-layout-column>
 
-  <nb-layout-column>
-
-
-                <!-- this creates a google map on the page with the given lat/lng from -->
-                  <!-- the component as the initial center of the map: -->
-        <agm-map [latitude]="lat" [longitude]="lng">
-        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-        </agm-map>
-
-
-  <!--
-    Stepper
-       <app-sidebar></app-sidebar>
-  -->
-
-  </nb-layout-column>
 </nb-layout>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import * as L from 'leaflet';
-import { GoogleMapsModule } from '@angular/google-maps';
+import { GoogleMapsModule, MapMarker } from '@angular/google-maps';
 
 
 @Component({
@@ -10,8 +10,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
 })
 export class VehiculesComponent  {
   readonly position = { lat: 51.678418, lng: 7.809007 };
-  lat = 51.678418;
-  lng = 7.809007;
+  //lat = 51.678418;
+  //lng = 7.809007;
 
   users: { name: string, title: string }[] = [
     { name: 'Amadou', title: 'CP' },
@@ -29,5 +29,36 @@ export class VehiculesComponent  {
       center: L.latLng({ lat: 14.7105714, lng: -17.4565405 }),
     };
 
+
+lat = 22.4064172;
+long = 69.0750171;
+zoom=7;
+
+
+
+  /* ancienne version */
+  /*
+  lat = 51.678418;
+  lng = 7.809007;
+  */
+
+  
+  markers = [
+    {
+        lat: 21.1594627,
+        lng: 72.6822083,
+        label: 'voiture 1'
+    },
+    {
+        lat: 23.0204978,
+        lng: 72.4396548,
+        label: 'voiture 2 '
+    },
+    {
+        lat: 22.2736308,
+        lng: 70.7512555,
+        label: 'voiture 3'
+    }
+];
 
 }

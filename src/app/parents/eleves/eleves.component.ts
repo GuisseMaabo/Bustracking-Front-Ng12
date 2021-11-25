@@ -31,8 +31,27 @@ export class ElevesComponent {
         center: L.latLng({ lat: 14.7105714, lng: -17.4565405 }),
       };
 
+lat = 22.4064172;
+long = 69.0750171;
+zoom=7;
 
-
-
+      markers = [
+        {
+            lat: 21.1594627,
+            lng: 72.6822083,
+            label: 'voiture 1 '
+        },
+        {
+            lat: 23.0204978,
+            lng: 72.4396548,
+            label: 'voiture 2 '
+        },
+        {
+            lat: 22.2736308,
+            lng: 70.7512555,
+            label: 'voiture 3'
+        }
+    ];
+    
 
 }

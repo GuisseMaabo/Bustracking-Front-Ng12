@@ -7,10 +7,12 @@ import { ElevesComponent } from './eleves/eleves.component';
 import { VehiculesComponent } from './vehicules/vehicules.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { AgmCoreModule } from '@agm/core';
+
 
 
 @NgModule({
-  declarations: [ParentComponent,  ElevesComponent, VehiculesComponent],
+  declarations: [ParentComponent,  ElevesComponent, ],//VehiculesComponent],
   imports: [
     CommonModule,
     NbActionsModule,
@@ -22,7 +24,10 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     GoogleMapsModule,
     LeafletModule,
     NbToggleModule,
-    NbCardModule
+    NbCardModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyC__5XKQLTE_t0SxOTV3_NI26yzDcqoPKY'
+   }),
 
 
   ],
@@ -30,7 +35,7 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     ParentComponent,
     //SidebarComponent,
     ElevesComponent,
-    VehiculesComponent
+    //VehiculesComponent
 
   ],
 })
