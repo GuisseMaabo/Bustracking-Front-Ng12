@@ -1,5 +1,5 @@
 <div class="infos">
- <nb-card size="small">
+ <!-- <nb-card size="small">
       <nb-card-header>Liste des élèves</nb-card-header>
       <nb-list>
         <nb-list-item *ngFor="let user of users">
@@ -8,23 +8,19 @@
         </nb-list-item>
       </nb-list>
     </nb-card>
-
-     <nb-card size="small">
+-->
+     <nb-card size="large">
 
       <nb-card-header> Détails de la  véhicule</nb-card-header>
-    <div class="vehicule">
-      <nb-list>
-        <nb-list-item>Ecole :  Maison de la sagesse</nb-list-item>
-        <nb-list-item>Chauffeur : Isakha</nb-list-item>
-        <nb-list-item>Position : Cité des eaux</nb-list-item>
-        <nb-list-item>Traffic : Serré</nb-list-item>
-        <nb-list-item>Heure arrivée Prévue : 18h30</nb-list-item>
-        <nb-list-item>Matricule : dk-xxxx-yy</nb-list-item>
+    <div class="vehicule" >              
+      <nb-list *ngFor="let marker of markers">
+        <nb-list-item  > Nom:   {{ marker.label }} </nb-list-item>
+        <nb-list-item> Lat:  {{ marker.lat }}</nb-list-item>
+        <nb-list-item>  Lng: {{ marker.lng }}</nb-list-item>
       </nb-list>
     </div>
   </nb-card>
 </div>
-
 
 
 <!--<div class="card-row">

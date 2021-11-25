@@ -15,6 +15,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 
 import { SidebarComponent } from './parents/sidebar/sidebar.component';
 import { AppRoutingModule } from './app-routing.module';
+import { VehiculesComponent } from './parents/vehicules/vehicules.component';
 
 
 
@@ -23,6 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     SidebarComponent,
+    VehiculesComponent
   ],
   imports: [
     BrowserModule,
