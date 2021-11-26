@@ -7,17 +7,17 @@
 </nb-card>
 -->
 
-     <div class="container"> 
+<div class="container"> 
       <agm-map 
        [latitude]='lat' 
        [longitude]='long'
        [zoom]='zoom'
        > 
-        <agm-marker   markerClick=toggleDisplayDiv() 
+        <agm-marker   (markerClick)="toggle(marker)" 
             *ngFor="let marker of markers" 
             [latitude]="marker.lat" 
-              [longitude]="marker.lng" >    
-                      <agm-info-window #infoWindow>
+              [longitude]="marker.lng" >     
+                      <agm-info-window #infoWindow  >
                       Nom:   {{ marker.label }}
                       Lat:  {{ marker.lat }}
                       Lng: {{ marker.lng }}
@@ -26,3 +26,16 @@
         </agm-marker>  
       </agm-map>   
 </div>
+<nb-layout-column>
+<ng-container *ngIf="show">
+<nb-card>
+  <nb-card-header > One car's  info </nb-card-header>
+  <nb-card-body >
+                   
+  </nb-card-body>
+</nb-card>
+<div>
+  
+</div>
+</ng-container>
+</nb-layout-column>

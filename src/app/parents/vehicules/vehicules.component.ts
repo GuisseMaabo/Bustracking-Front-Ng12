@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import * as L from 'leaflet';
 import { GoogleMapsModule, MapMarker } from '@angular/google-maps';
 
@@ -30,11 +30,15 @@ export class VehiculesComponent  {
     };
 
 
+  
+   
+
 lat = 22.4064172;
 long = 69.0750171;
 zoom=7;
 
-
+public show:boolean = false;
+public markerName:any = 'Show';
 
   /* ancienne version */
   /*
@@ -61,4 +65,21 @@ zoom=7;
     }
 ];
 
+toggle(selectedMarker: any) {
+  this.show = !this.show;
+
+  // CHANGE THE NAME OF THE BUTTON.
+  if(this.show)  
+    this.markerName = "Hide";
+  else
+    this.markerName = "Show";
+    alert("");
+    console.log("Selected item Id: ", selectedMarker.label);
+  
+
 }
+
+
+
+}
+
