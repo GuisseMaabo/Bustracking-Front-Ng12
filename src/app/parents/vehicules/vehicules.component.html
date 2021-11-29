@@ -13,29 +13,33 @@
        [longitude]='long'
        [zoom]='zoom'
        > 
-        <agm-marker   (markerClick)="toggle(marker)" 
+        <agm-marker  
             *ngFor="let marker of markers" 
             [latitude]="marker.lat" 
-              [longitude]="marker.lng" >     
+              [longitude]="marker.lng" 
+               (markerClick)="toggle(marker)" >     
                       <agm-info-window #infoWindow  >
-                      Nom:   {{ marker.label }}
+                      Nom:   {{ marker.chauffeur }}
                       Lat:  {{ marker.lat }}
                       Lng: {{ marker.lng }}
                 </agm-info-window> 
-
         </agm-marker>  
       </agm-map>   
 </div>
-<nb-layout-column>
-<ng-container *ngIf="show">
-<nb-card>
-  <nb-card-header > One car's  info </nb-card-header>
-  <nb-card-body >
-                   
-  </nb-card-body>
-</nb-card>
-<div>
-  
-</div>
-</ng-container>
-</nb-layout-column>
+  <nb-layout-column>
+    <ng-container *ngIf="show">
+      <nb-card >
+        <nb-card-header > Détails du véhicule </nb-card-header>
+          <nb-card-body *ngIf="selectedpoint" >       
+            <nb-list>
+              <nb-list-item >   {{ selectedpoint.ecole }}  </nb-list-item>
+              <nb-list-item>    {{ selectedpoint.chauffeur}}  </nb-list-item>
+              <nb-list-item>    {{ selectedpoint.position }}  </nb-list-item>
+              <nb-list-item>    {{ selectedpoint.traffic }}   </nb-list-item>
+              <nb-list-item>   {{ selectedpoint.heureArrPrevue }}  </nb-list-item>
+              <nb-list-item>   {{ selectedpoint.matricule }}   </nb-list-item>
+            </nb-list>
+          </nb-card-body>
+      </nb-card>
+    </ng-container>
+  </nb-layout-column>

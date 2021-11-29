@@ -1,17 +1,16 @@
 <nb-layout>
-
   <nb-layout-header size="small">
       <h5 class="title">School Bus Tracking </h5>
       <app-parent></app-parent>
-  </nb-layout-header>
-  
-  <nb-layout-column ng-model="myVar" ng-init="myVar = false">
-  <app-eleves></app-eleves>
-  </nb-layout-column>
-  
-  <nb-layout-column>
-      <router-outlet></router-outlet> 
-      <app-vehicules></app-vehicules>
-  </nb-layout-column>
+      </nb-layout-header>
 
+ 
+    <nb-layout-column>
+      <app-eleves></app-eleves>
+    </nb-layout-column>
+
+  <nb-layout-column>
+      <app-vehicules ></app-vehicules>
+  </nb-layout-column>
+     <router-outlet></router-outlet> 
 </nb-layout>

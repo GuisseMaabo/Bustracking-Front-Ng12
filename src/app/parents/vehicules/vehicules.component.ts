@@ -1,6 +1,8 @@
 import { Component, ElementRef, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import * as L from 'leaflet';
 import { GoogleMapsModule, MapMarker } from '@angular/google-maps';
+import { Markers } from '../../markers';
+import { MARKERS } from '../../mock-markers'
 
 
 @Component({
@@ -46,7 +48,7 @@ public markerName:any = 'Show';
   lng = 7.809007;
   */
 
-  
+  /*
   markers = [
     {
         lat: 21.1594627,
@@ -64,8 +66,12 @@ public markerName:any = 'Show';
         label: 'voiture 3'
     }
 ];
+*/
+markers = MARKERS;
 
-toggle(selectedMarker: any) {
+selectedpoint  ?: Markers;
+
+toggle(selectedMarker: Markers): void {
   this.show = !this.show;
 
   // CHANGE THE NAME OF THE BUTTON.
@@ -73,8 +79,9 @@ toggle(selectedMarker: any) {
     this.markerName = "Hide";
   else
     this.markerName = "Show";
-    alert("");
-    console.log("Selected item Id: ", selectedMarker.label);
+    //  alert("");
+    this.selectedpoint = selectedMarker;
+   //console.log("Selected item Id: ", selectedMarker.label);
   
 
 }

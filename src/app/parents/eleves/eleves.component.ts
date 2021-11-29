@@ -1,5 +1,7 @@
 import { Component, HostListener, TemplateRef, ViewChild } from '@angular/core';
 import * as L from 'leaflet';
+import { Markers } from 'src/app/markers';
+import { MARKERS } from 'src/app/mock-markers';
 
 
 @Component({
@@ -22,29 +24,7 @@ export class ElevesComponent {
       position: 'position: Cité des eaux', traffic:' Traffic: Cité des eaux',
       Heure_Arr_Prevu:' Heure Arrivée Prévu: 18h30', Matricule:'Matricule: dk-xxxx-yy' },
       ];
-
-      options = {
-        layers: [
-          L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 5, attribution: '...' }),
-        ],
-        zoom: 5,
-        center: L.latLng({ lat: 14.7105714, lng: -17.4565405 }),
-      };
-
-      some_text = "Click Here";
-      inside = false;
-      @HostListener("click")
-      clicked() {
-        this.inside = true;
-      }
-       @HostListener("document:click")
-  clickedOut() {
-    this.some_text = this.inside
-      ? "Event Triggered"
-      : "Event Triggered Outside Component";
-    this.inside = false;
-  }
-
+/*
 lat = 22.4064172;
 long = 69.0750171;
 zoom=7;
@@ -66,6 +46,9 @@ zoom=7;
             label: 'voiture 3'
         }
     ];
-    
+    */
+    markers = MARKERS;
+
+    selectedpoint  ?: Markers;
 
 }

@@ -5,7 +5,7 @@ import { AgmCoreModule } from '@agm/core';
 
 
 import { AppComponent } from './app.component';
-import { NbThemeModule, NbSidebarModule, NbCardModule, NbStepperModule, NbButtonModule, NbLayoutModule } from '@nebular/theme';
+import { NbThemeModule, NbSidebarModule, NbCardModule, NbStepperModule, NbButtonModule, NbLayoutModule, NbListModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 import { FormsModule } from '@angular/forms';
@@ -38,6 +38,7 @@ import { VehiculesComponent } from './parents/vehicules/vehicules.component';
     NbSidebarModule.forRoot(),
     GoogleMapsModule,
     NbCardModule,
+    NbListModule,
     NbStepperModule,
     NbButtonModule,
     AgmCoreModule.forRoot({
