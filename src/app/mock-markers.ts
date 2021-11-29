@@ -29,7 +29,7 @@ export const MARKERS: Markers[] = [
         ecole: 'sacrée coeur', 
         chauffeur: 'chauf3',
         position:'cité keur gorgui',
-        traffic: 'smooth',
+        traffic: 'fluide',
         heureArrPrevue: '18h20',
         matricule: 'ab-14523',  
     }

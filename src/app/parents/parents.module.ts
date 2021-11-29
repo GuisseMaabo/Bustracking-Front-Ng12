@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ParentComponent } from './parent/parent.component';
-import { NbActionsModule, NbCardModule, NbLayoutModule, NbListModule, NbSidebarModule, NbUserModule, NbToggleModule } from '@nebular/theme';
+import { NbActionsModule, NbCardModule, NbLayoutModule, NbListModule, NbSidebarModule, NbUserModule, NbToggleModule, NbTabsetModule } from '@nebular/theme';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ElevesComponent } from './eleves/eleves.component';
 import { VehiculesComponent } from './vehicules/vehicules.component';
@@ -23,6 +23,7 @@ import { AgmCoreModule } from '@agm/core';
     NbUserModule,
     GoogleMapsModule,
     LeafletModule,
+    NbTabsetModule,
     NbToggleModule,
     NbCardModule,
     AgmCoreModule.forRoot({

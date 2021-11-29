@@ -1,4 +1,4 @@
-<div class="infos">
+
  <!-- <nb-card size="small">
       <nb-card-header>Liste des élèves</nb-card-header>
       <nb-list>
@@ -10,16 +10,44 @@
     </nb-card>
      ng-if="markers"
 -->
-  <nb-card size="small">
+  <nb-card>
       <nb-card-header> Liste des véhicule</nb-card-header>
     <div class="vehicule">              
       <nb-list *ngFor="let marker of markers">
-        <nb-list-item  > Nom:   {{ marker.ecole }} </nb-list-item>
+        <nb-list-item > Matricule du véhicule :   {{ marker.matricule }} </nb-list-item>
       </nb-list>
     </div>
   </nb-card>
-</div>
 
+<!-- 
+  <nb-card >
+        <nb-card-header > Détails du véhicule </nb-card-header>
+          <nb-card-body *ngIf="selectedpoint" >              
+            <nb-tabset>
+              <nb-tab tabTitle="Ecole">
+                <p> Nom de Lecole  : <strong>  {{ selectedpoint.ecole }} </strong>.</p>
+              </nb-tab>
+            <nb-tab tabTitle="Chauffeur">
+                <p> Nom du Chauffeur : <strong> {{ selectedpoint.chauffeur}} </strong>.</p>
+            </nb-tab>
+            <nb-tab tabTitle="Position">
+              <p>Position de la voiture : <strong>   {{ selectedpoint.position }}</strong>.</p>
+            </nb-tab>
+            <nb-tab tabTitle="Traffic">
+              <p> Situation du Traffic :  <strong>    {{ selectedpoint.traffic }}</strong>.</p>
+            </nb-tab>
+            <nb-tab tabTitle="Heure Arrivée ">
+              <p> Heure d'arrivé prévue : <strong>  {{ selectedpoint.heureArrPrevue }}</strong>.</p>
+            </nb-tab>
+            <nb-tab tabTitle="Matricule">
+            <p> Matricule du Véhicule : <strong>  {{ selectedpoint.matricule }} </strong>.</p>
+            </nb-tab>
+            </nb-tabset>
+            </nb-card-body>
+    </nb-card>
+
+-->
+ 
 
 
 <!--<div class="card-row">

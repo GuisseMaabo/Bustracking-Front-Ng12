@@ -1,5 +1,5 @@
-import { Component, HostListener, TemplateRef, ViewChild } from '@angular/core';
-import * as L from 'leaflet';
+import { Component} from '@angular/core';
+
 import { Markers } from 'src/app/markers';
 import { MARKERS } from 'src/app/mock-markers';
 
@@ -48,7 +48,7 @@ zoom=7;
     ];
     */
     markers = MARKERS;
-
     selectedpoint  ?: Markers;
+  
 
 }

@@ -26,19 +26,44 @@
         </agm-marker>  
       </agm-map>   
 </div>
-  <nb-layout-column>
+  <nb-layout-column size="small">
     <ng-container *ngIf="show">
       <nb-card >
         <nb-card-header > Détails du véhicule </nb-card-header>
           <nb-card-body *ngIf="selectedpoint" >       
+         
+         <!--
             <nb-list>
-              <nb-list-item >   {{ selectedpoint.ecole }}  </nb-list-item>
-              <nb-list-item>    {{ selectedpoint.chauffeur}}  </nb-list-item>
-              <nb-list-item>    {{ selectedpoint.position }}  </nb-list-item>
-              <nb-list-item>    {{ selectedpoint.traffic }}   </nb-list-item>
-              <nb-list-item>   {{ selectedpoint.heureArrPrevue }}  </nb-list-item>
-              <nb-list-item>   {{ selectedpoint.matricule }}   </nb-list-item>
+              <nb-list-item >  Ecole:  {{ selectedpoint.ecole }}  </nb-list-item>
+              <nb-list-item>  Chauffeur:   {{ selectedpoint.chauffeur}}  </nb-list-item>
+              <nb-list-item>  Position:   {{ selectedpoint.position }}  </nb-list-item>
+              <nb-list-item> Traffic :    {{ selectedpoint.traffic }}   </nb-list-item>
+              <nb-list-item> Heure Arrivée Prévue  {{ selectedpoint.heureArrPrevue }}  </nb-list-item>
+              <nb-list-item>  Matricule :  {{ selectedpoint.matricule }}   </nb-list-item>
             </nb-list>
+         -->  
+         
+    <nb-tabset>
+
+    <nb-tab tabTitle="Ecole">
+        <p> Nom de Lecole  : <strong>  {{ selectedpoint.ecole }} </strong>.</p>
+      </nb-tab>
+      <nb-tab tabTitle="Chauffeur">
+        <p> Nom du Chauffeur : <strong> {{ selectedpoint.chauffeur}} </strong>.</p>
+      </nb-tab>
+      <nb-tab tabTitle="Position">
+        <p>Position de la voiture : <strong>   {{ selectedpoint.position }}</strong>.</p>
+      </nb-tab>
+      <nb-tab tabTitle="Traffic">
+        <p> Situation du Traffic :  <strong>    {{ selectedpoint.traffic }}</strong>.</p>
+      </nb-tab>
+      <nb-tab tabTitle="Heure Arrivée ">
+        <p> Heure d'arrivé prévue : <strong>  {{ selectedpoint.heureArrPrevue }}</strong>.</p>
+      </nb-tab>
+      <nb-tab tabTitle="Matricule">
+        <p> Matricule du Véhicule : <strong>  {{ selectedpoint.matricule }} </strong>.</p>
+      </nb-tab>
+    </nb-tabset>
           </nb-card-body>
       </nb-card>
     </ng-container>
